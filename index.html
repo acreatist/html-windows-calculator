@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS Presentation homework - Calculator</title>
+		<link rel="stylesheet" href="calc.css" />
+	</head>
+	<body>
+		<!-- start window frame -->
+		<div class="window-frame programmer">
+			<!-- window menu bar -->
+			<div class="window-bar clearafter">
+				<h4>Calculator</h4>
+				
+				<!-- close, minimize, maximazie buttons -->
+				<button class="window-button window-close">X</button>
+				<button class="window-button window-maximize">&#9633;</button>
+				<button class="window-button window-minimize">_</button>
+			</div>
+			
+			<!-- Calculator -->
+			<div class="calculator clearafter">
+				<!-- calculator file menu bar-->
+				<ul class="menu-bar">
+					<li><u>V</u>iew</li>
+					<li><u>E</u>dit</li>
+					<li><u>H</u>elp</li>
+				</ul>
+				
+				<!-- start calculator body -->
+				<input type="text" readonly="readonly" value="0" class="text-display bordered">
+				<section class="bits-helper bordered">
+					<ul class="bits clearafter">
+						<!-- row bits 32-63 -->
+						<li>
+							0000
+							<label>63</label>
+						</li>
+						<li>0000</li>
+						<li>0000</li>
+						<li>0000</li>
+						<li>
+							0000
+							<label>47</label>
+						</li>
+						<li>0000</li>
+						<li>0000</li>
+						<li>
+							0000
+							<label>32</label>
+						</li>
+					</ul>
+					<ul class="bits clearafter">
+						<!-- row bits 0-31 -->
+						<li>
+							0000
+							<label>31</label>
+						</li>
+						<li>0000</li>
+						<li>0000</li>
+						<li>0000</li>
+						<li>
+							0000
+							<label>15</label>
+						</li>
+						<li>0000</li>
+						<li>0000</li>
+						<li>
+							0000
+							<label>0</label>
+						</li>
+					</ul>
+				</section>
+				<!-- end bits-helper-->
+				
+				<!-- start buttons -->
+				<!-- data type radios -->
+				<fieldset data-role="data-type-radio-list">
+					<!-- type -->
+					<ul class="radio-list bordered">
+						<li><input type="radio" name="numTypeRadio" id="hex" /><label for="hex">Hex</label></li>
+						<li><input type="radio" name="numTypeRadio" id="dec" /><label for="dec">Dec</label></li>
+						<li><input type="radio" name="numTypeRadio" id="oct" /><label for="oct">Oct</label></li>
+						<li><input type="radio" name="numTypeRadio" id="bin" /><label for="bin">Bin</label></li>
+					</ul>
+					
+					<!-- lenght -->
+					<ul class="radio-list bordered">
+						<li><input type="radio" name="lengthRadio" id="qword" /><label for="qword">Qword</label></li>
+						<li><input type="radio" name="lengthRadio" id="dword" /><label for="dword">Dword</label></li>
+						<li><input type="radio" name="lengthRadio" id="word" /><label for="word">Word</label></li>
+						<li><input type="radio" name="lengthRadio" id="byte" /><label for="byte">Byte</label></li>
+					</ul>
+				</fieldset>
+				<!-- end data type radios -->
+				
+				<!-- bit-operations buttons fieldset -->
+				<fieldset data-role="bit-operations">
+					<button disabled="disabled">&nbsp;</button>
+					<button name="modBtn">Mod</button>					
+					<button name="aBtn" disabled="disabled">A</button>
+					
+					<button name="bracketLBtn">(</button>
+					<button name="bracketRBtn">)</button>
+					<button name="bBtn" disabled="disabled">B</button>
+					
+					<button name="rolBtn">RoL</button>
+					<button name="rorBtn">RoR</button>
+					<button name="cBtn" disabled="disabled">C</button>
+					
+					<button name="xolBtn">Xor</button>
+					<button name="orBtn">Or</button>
+					<button name="dBtn" disabled="disabled">D</button>
+					
+					<button name="lshBtn">Lsh</button>
+					<button name="rshBtn">Rsh</button>
+					<button name="eBtn" disabled="disabled">E</button>
+					
+					<button name="andBtn">Not</button>
+					<button name="notBtn">And</button>
+					<button name="FBtn" disabled="disabled">F</button>
+				</fieldset>
+				<!-- END bit-operations buttons fieldset -->
+				
+				<!-- Main calculator functions fieldset -->
+				<fieldset data-role="general-buttons">
+					<!-- row memory buttons -->
+					<button name="memMC">MC</button>
+					<button name="memMR">MR</button>
+					<button name="memMS">MS</button>
+					<button name="memMPlus">M+</button>
+					<button name="memMMinus">M-</button>
+					
+					<button name="back">&larr;</button>
+					<button name="ce">CE</button>
+					<button name="c">C</button>
+					<button name="plusMinus">&plusmn;</button>
+					<button name="sqrt" disabled="disabled">&radic;</button>
+					
+					<button name="num7">7</button>
+					<button name="num8">8</button>
+					<button name="num9">9</button>
+					<button name="del">/</button>
+					<button name="perc" disabled="disabled">%</button>
+					
+					<button name="num4">4</button>
+					<button name="num5">5</button>
+					<button name="num6">6</button>
+					<button name="mul">&lowast;</button>
+					<button name="discrimninat" disabled="disabled">1<i>/x</i></button>
+					
+					<button name="num7">3</button>
+					<button name="num8">2</button>
+					<button name="num9">1</button>
+					<button name="minus">&minus;</button>
+					
+					<button name="num0">0</button>
+					<button name="decPoint" disabled="disabled">.</button>
+					<button name="plus">+</button>
+					
+					<button name="equals">=</button>
+				</fieldset>
+				<!-- END Main calculator functions fieldset -->
+			</div>
+			<!-- /calculator -->
+		</div>
+		<!-- /window-frame-->
+	</body>
+</html>
